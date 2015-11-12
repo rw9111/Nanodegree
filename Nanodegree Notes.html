@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Nanodegree Notes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+<body>
+  <h1><b>Table of Contents</b></h1>
+  <div class="lessonbox">
+    <h2>Lesson 1</h2>
+  
+   
+  <div class="basebox"><p><b><u>Web Basics</u></b></p>
+  <p>The World Wide Web was invented in the 1990s and is made up of over 30 billion pages. 
+  Those pages are HTML documents. HTML stands for HyperText Markup Language. Those documents 
+  are linked together using HyperLinks. Within the HTML documents there can be many types 
+  of files that can be accessed and downloaded which include, HTML, Plain Text, 
+  Images, Videos, and Music.</p></div>
+
+  <div class="basebox"><p><b><u>Major pieces of the web</u></b></p>
+
+  You, your computer and browser, the internet, and servers. Your computer sends request via the internet to servers. Those requests are sent using a protocol called http. The server responds with files that you r browser displays.<br></div>
+
+  <div class="basebox"><p><b><u>HTML</u></b> -  HyperText Markup Language</p> 
+
+
+  HTML is made up of:
+    <ul id="HTML">
+      <li>text content - what you actually see</li>
+      <li>markup - what the page looks like (style)</li>
+      <li>references to other documents - images, videos</li>
+      <li>links to other pages</li>
+    </ul>
+  </div>
+
+
+  <div class="basebox"><p><b><u>HTML Markup:</u></b></p>
+
+
+  <p><b>Tags</b> - An HTML tag is always contained within angled brackets. An example of this would be
+    <b><em>&lt;name> contents &lt;/name></em></b> Most tags have an opening tag (<b><em>&lt;p></em></b> for example) and a closing tag, (
+    <b><em>&lt;/p></em></b>). Some tags (called "void" tags) do not require a closing tag (like the <b>&lt;br></b> tag).
+    <br>
+
+    <b>Element:</b> An HTML element refers to everything within a set of opening and closing tags.
+    <br>
+    <b>Attribute:</b> This is a property of an HTML element.</p></div>
+
+  <div class="basebox"><b><u>Example Tags:</u></b>
+  <br>
+  <ul id="Tag">
+    <li><b>Bold</b> - &lt;b> contents &lt;/b></li>
+    <li><em>Emphasis</em> - &lt;em> contents &lt;/em></li>
+    <li>Break - &lt;br> adds a line break </li>
+    <li>Paragraph - &lt;p> contents &lt;/p></li>
+  </ul></div>
+
+  <div class="basebox"><p><b><u>HTML Attributes:</u></b></p>
+  <p>&lt;TAG ATTR = "value"> contents &lt;/TAG></p>
+
+  <ul id="Attr">
+    <li>Anchor Tag - &lt;a href="http://www.udacity.com"><a href="http://www.udacity.com">Udacity</a>&lt;/a></li>
+    <li>Image tag - &lt;img> &lt;img scr = "url" alt = "text"></li>
+    </ul>
+    <span class="highlight">Note: Image tags do not have a closing tag. These types of tag are called <b>Void Tags</b></span></div>
+  
+
+  <div class="basebox"><p><b><u>Inline and Block elements</u></b></p>
+  <p>An Inline element adds a new line to the end of your text. A Block element adds a text box around your text. Block elements have height and width dimensions to them. The &lt;br>, &lt;em>, and the &lt;img> tag are examples of an Inline element and the &lt;p>text&lt;/p>
+    is an example of a Block element.
+  </p></div>
+
+  <div class="basebox"><p><b><u>Span and Div</u></b></p>
+  Span is Inline
+  <br> &lt;span>text&lt;/span>
+  <br> Div is Block
+  <br> &lt;div>text&lt;/div>
+  <br></div>
+
+  <div class="basebox"><p><b><u>HTML Document Structure</u></b></p>
+
+  &lt;!DOCTYPE HTML> --- <em>This is the doctype</em>
+  <br> &lt;html>
+  <br> &lt;head>
+  <br>
+  <em><b>CSS, Javascript is entered here</b></em>
+  <br> &lt;title>Title&lt;/title>
+  <br> &lt;/head>
+  <br> &lt;body> &lt;b>Content&lt;/b>
+  <br> &lt;/body>
+  <br> &lt;/html>
+  <br></div>
+</div>
+
+<div class="lessonbox"><h2>Lesson 2</h2>
+<div>==============================================</div>
+<div class="basebox"><p><b><u>Creating A Structured HTML Document</u></b></p>
+
+<p><b>HTML</b> is considered the structure of the web page.
+HTML is the basic language of the Web.  Like any language it t has a specific syntax and rules.
+HTML uses Tags to define the structure of the web page.  
+The browser interprets HTML tags into elements that form a tree.  The browser knows how 
+to do this because of the DOM, (Document Object Model).  The DOM is a standard convention for 
+representing and interacting with elements in HTML.  Each HTML tag creates an element 
+in the DOM that the browser uses to display the page.</p></div>
+
+  <div class="basebox"><p><b><u>CSS</u></b> (Cascading Style Sheet) is considered the style of the web page, 
+  what it will look like.  CSS allows you to use a specific syntax and rules to change 
+  how elements look on the page, the size of the font, the color, background, borders, 
+  position, and on and on.</p></div>
+
+  <div class="basebox"><p><b><u>Javascript</u></b> is the interactive components.</p></div>
+  
+  <div class="basebox"><p><b><u>Boxify a Design</u></b></p>
+
+<p>If you looked at the structure of a Web page you would see that it is made up of boxes.  
+  By using boxes it makes a lot easier to rearrange things if you decide to give the web page
+  a different look.  When designing a web page it actually helps to start with big boxes 
+  and work you rway down to the smaller boxes.  These boxes are usually defined using 
+  the &lt;div>&lt;/div> tag
+</p></div>
+</div>
+
+<div class="lessonbox">
+  <h2>Lesson 3</h2>
+  <span>==============================================</span>
+<div class="basebox"><p><b><u>Adding CSS Style and HTML Structure Subtitles</u></b></p>
+
+<p>CSS or Cascading Style Sheets. You can have several CSS files or
+sheets that will be referenced an HTML page.
+
+With CSS the most specific rule is applied to every element.  The concept of most specific rule applied is what the word cascading means.  You keep going down and
+down into the rules until you find the one that best describes the elements.  Then that rule gets applied.
+
+Changing the visual properties of an element only changes how the element is displayed, not what kind of element it is.
+
+Some examples of style tags are H1 and H2, H3.
+
+CSS can be used to position elements on the web page.
+
+One example is the flex box layout.
+
+
+Flex box means flexible box and it provides an efficient way to lay out, align, and distribute space among items in a container or div.</p>
+
+<p>A web page is a collection of boxes, in which each box contains 4 spatial components content, padding (to separate the content from the border), border, and margin (to separate the border from the adjacent boxes) . The size of the box can be set by by % or by pixel. These attributes can all be set within the HTML code or inside a CSS</P></div>
+
+
+
+</div>
+
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img class="center" src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!">
+    </a>
+</p>
+
+
+</body>
+
+</html>
