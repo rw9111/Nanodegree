@@ -48,7 +48,7 @@ hard_answers = ['for', 'for', 'variable', 'in', 'list', 'while', 'if', 'block', 
 
 def output(qname, current_quiz, answer_replace, attempts_left, max_trys):
     """Prompts the user for answers and if they are correct or not and how many guesses left if the user guesses wrong."""
-    prompt = '\nBelow is the %s quiz you selected:\n\n%s' % (qname, current_quiz)
+    prompt = '\nBelow is the %s quiz:\n\n%s' % (qname, current_quiz)
     prompt += '\n\nWhat is you answer for %s? ' % answer_replace
     if attempts_left == max_trys:
         return prompt
@@ -67,13 +67,16 @@ def ask_question(qname, quiz, blank_num, answer, max_trys):
     and the number of the next answer blank."""
     attempts_left = max_trys
     answer_replace = '__' + str(blank_num) + '__'
+    """Displays quiz with all blanks.  Returns prompt Asking for answer for the first blank number."""
     prompt = output(qname, quiz, answer_replace, attempts_left, max_trys)
-    user_guess = raw_input(prompt).lower()
-    while user_guess != answer.lower() and attempts_left > 1:
+    user_guess = raw_input(prompt)
+    """If user guess is wrong outputs the quiz and try again and displays number of tries left.  Decreases number or tries by 1"""
+    while user_guess != answer and attempts_left > 1:
         attempts_left = attempts_left - 1
         prompt = output(qname, quiz, answer_replace, attempts_left, max_trys)
-        user_guess = raw_input(prompt).lower()
-    if user_guess == answer.lower() and attempts_left > 0:
+        user_guess = raw_input(prompt)
+    """if user guess is correct lets user know its correct and displays quiz with correct answer filled in and goes on to the next blank number."""   
+    if user_guess == answer and attempts_left > 0:
         print '\nCorrect!\n'
         return (quiz.replace(answer_replace, answer), blank_num + 1)
     else:
@@ -99,22 +102,25 @@ def select_game_difficulty():
     """Choose a game difficulty.  Stays in loop until a valid input is selected.  Either 1, 2, or 3"""
     print "Enter a quiz difficulty. Choose (1, 2, or 3): "
     while True:
+        """User selects quiz dificulty.  Only allows to choose 1,2 or 3 """
         user_input = raw_input("(1) Easy, (2) Medium, (3) Hard: ")
         if user_input in ['1','2','3']:
             break
-    print "\nYou get 3 trys to answer each blank.\n"
+    print "\nYou get 3 trys to get each answer correct.\n"
     return user_input
 
 
 
 def play_game():
-    """Starts the quiz game.  Selects the defficulty and then shows the question
-    associated with the diffeculty selected.  Returns True if the user wins, and False if they dont"""
+    """Starts the quiz game.  Selects the difficulty and then shows the quiz
+    associated with the diffeculty selected."""
     difficulty = select_game_difficulty()
+    """Returns the quiz name, the quiz with blanks and the quiz answers"""
     qname, quiz, answers = get_quiz_and_answers(difficulty)
     max_guesses = 3
     answer_number = 1
     while answer_number <= len(answers):
+        """Returns the quiz with correct answers filled in"""
         quiz, answer_number = ask_question(qname, quiz, answer_number, answers[answer_number - 1], max_guesses)
         if quiz is None:
             print "Game over!  You took many guesses!"
